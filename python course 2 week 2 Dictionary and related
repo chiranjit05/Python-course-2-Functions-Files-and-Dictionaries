@@ -1,0 +1,432 @@
+JUPYTER NOTEBOOK LINK : http://localhost:8888/notebooks/Desktop/coursera%20courses/python_course_2/python%20course%202%20week%202%20Dictionary%20and%20related%20.ipynb
+
+
+# Method 1 of declaration :
+a = {}  
+a[' rank 1 '] = 'shippuden'
+a[' rank 2 '] = 'one piece'
+a[' rank 3 '] = 'demon slayer'
+a[' rank 4 '] = 'psycho pass'
+print(a)
+print(type(a))
+
+# Method 2 of declaration : 
+
+b = {'rank 1' : 'shippuden','rank 2' : 'one piece','rank 3' :  'demon slayer','rank 4' : 'psycho pass'}
+print(b)
+
+
+#  Printing value of dictionary :
+
+b = {'rank 1' : 'shippuden','rank 2' : 'one piece','rank 3' :  'demon slayer','rank 4' : 'psycho pass'}
+
+print (b['rank 2'])
+print(b['rank 1'])
+
+# Printing value of dictionary  : 
+
+value = b['rank 3']
+print(value)
+print(type(value))
+
+# data types :
+
+
+medals= {"gold" : 33 , "silver" : 17 , "bronze" :  12}
+print(medals)
+print(type(medals["gold"]))
+
+# Updation of values in dictionary :
+
+swimmers = {'Manuel':4, 'Lochte':12, 'Adrian':7, 'Ledecky':5, 'Dirado':4, 'Phelps':23}
+swimmers["Phelps"] += 5
+print(swimmers,"\n")
+print(swimmers.keys())
+k=swimmers.keys()
+print(k)
+l=list(k)
+print(k)
+
+# printing keys in dictionary :
+
+swimmers = {'Manuel':4, 'Lochte':12, 'Adrian':7, 'Ledecky':5, 'Dirado':4, 'Phelps':23}
+
+print("Method 1 : ",swimmers.keys())
+k=swimmers.keys()
+print("Method 2 : ",k)
+
+# also method : 
+
+print("best method : ")
+l=list(swimmers.keys())
+print(l)
+
+# last method 
+
+print("loop method : ")
+for key in swimmers.keys():
+    print(key," has the value : ",key)
+
+# functions of dictinaries : 
+
+
+l = list(swimmers.items())
+print("items in the list are : ")
+print(l)
+print("\n")
+v = list(swimmers.values())
+print("values are : ")
+print(v)
+
+for v in swimmers.items():
+    print(v)
+    print(type(v))
+# note : the data type of .items() function is tuple type
+
+# in key word :
+print("\n checking the in keyword usage : ")
+print("Manuel" in swimmers)
+print("Mike" in swimmers)
+
+
+print("\n checking the .get() function :")
+print(swimmers.get("Adrian"))
+
+
+places = {"Australia":2000, "Greece":2004, "China":2008, "England":2012}
+places["Brazil"]=2016
+print(places)
+
+
+
+medal_events = {'Shooting': 7, 'Fencing': 4, 'Judo': 2, 'Swimming': 3, 'Diving': 2}
+events = list(medal_events.keys())
+print(events)
+
+
+# extra example :
+inventory = {'apples': 430, 'bananas': 312, 'oranges': 525, 'pears': 217}
+print('apples' in inventory)
+print('cherries' in inventory)
+
+if 'bananas' in inventory:
+    print(inventory['bananas'])
+else:
+    print("We have no bananas")
+
+print(medal_events)
+medal_events["Fencing"]+=2
+print("After aliasing : ")
+print(medal_events)
+
+with open("zoro.txt","r") as r:
+    a=r.read()
+    ctr=ce=0
+    print(a)
+    for c in a:
+        if (c == "i"):
+            ctr+=1
+        if (c == "e"):
+            ce+=1
+    print("count of c :"+ str(ctr)) # alternate method to print the same statement :  print("count of c :",ctr)
+    print("count of e : " + str(ce))
+
+print("")
+
+# perfect use of dictionary :
+
+print("Using DICTIONARY : ")
+with open("zoro.txt","r") as a:
+    r=a.read()
+    x={"t" : 0, "c" : 0}
+    print("Before counting : \n",x)
+    for c in r:
+        if c == "c":
+            x["t"]+=1
+        if c == "t":
+            x["c"]+=1
+    print("after counting : \n",x)
+    print("\n OR individually ")
+    print("no of occurances of c : ", x["c"])
+    print("no of occurances of t : ", x["t"])
+
+            
+
+#  Provided is a string saved to the variable name sentence. Split the string into a list of words, then create a 
+#dictionary that contains each word and the number of times it occurs. Save this dictionary to the 
+#variable name word_counts.
+
+
+sentence = "The dog chased the rabbit into the forest but the rabbit was too quick."
+print(sentence)
+word_counts={}
+
+print(sentence)
+l=sentence.split()
+print(l)
+for k in l:
+    word_counts[k] = 0
+print(word_counts)
+for k in l:
+    word_counts[k] += 1
+print(word_counts)
+
+stri = "what can I do"
+char_d={}
+l=[]
+for i in stri : 
+    l.append(i)
+print("list : ",l)
+print("string : ",stri)
+
+for i in l :
+    char_d[i]=0
+for i in l:
+    char_d[i]+=1
+    
+
+print("final output : \n ", char_d)
+
+travel = {"North America": 2, "Europe": 8, "South America": 3, "Asia": 4, "Africa":1, "Antarctica": 0, "Australia": 1}
+total = 0
+for i in travel :
+    total += travel[i]
+print(total)
+
+
+
+"""Create a dictionary called d that keeps track of all the characters in the string placement and notes how many
+times each character was seen. Then, find the key with the lowest value in this dictionary 
+and assign that key to min_value'."""
+
+placement = "Beaches are cool places to visit in spring however the Mackinaw Bridge is near. Most people visit Mackinaw later since the island is a cool place to explore."
+d={}
+c=[]
+for i in placement :
+    c.append(i)
+#print(c)
+for i in placement:
+    d[i] = 0
+#print(d)
+
+for i in placement :
+    d[i] += 1
+print(d)
+min_value = d['a']
+print(min_value)
+for i in d:
+    if(d[i]<min_value):
+        min_value=d[i]
+print("MIN VALUE : "min_value)
+
+
+l=[23,43,53,13,5,26,12,33]
+min=l[0]
+for i in range(len(l)):
+    if(l[i]<min):
+        min=l[i]
+        ind = i
+print("small:",min)
+print("index number : ",ind)
+
+""". Create a dictionary called lett_d that keeps track of all of the characters in the string product and notes how many 
+times each character was seen. Then, find the key with the highest value in this dictionary and assign that key 
+to max_value."""
+
+product = "iphone and android phones"
+lett_d={}
+l=[]
+for i in product:
+    l.append(i)
+print("chacing the list : \n",l)
+for i in l:
+    lett_d[i]=0
+print("initializing the dict : \n",lett_d)
+for i in product:
+    lett_d[i]+=1
+print("final output : ",lett_d)
+max_val = lett_d['a']
+max_value = 'a'
+for i in lett_d:
+    if(lett_d[i]>max_val):
+        max_val=lett_d[i]
+        max_value = i
+print("max_val : ",max_value)
+
+
+"""The dictionary Junior shows a schedule for a junior year semester.
+The key is the course name and the value is the number of credits. 
+Find the total number of credits taken this semester and assign it to the variable credits. 
+Do not hardcode this – use dictionary accumulation!"""
+
+Junior = {'SI 206':4, 'SI 310':4, 'BL 300':3, 'TO 313':3, 'BCOM 350':1, 'MO 300':3}
+credits=0
+for i in Junior:
+    credits += Junior[i]
+print("credits",credits)
+
+"""Create a dictionary, freq, that displays each character in string str1 as the key and its frequency as the value."""
+
+str1 = "peter piper picked a peck of pickled peppers"
+freq={}
+l=[]
+for c in str1:
+    l.append(c)
+print("list is : \n",l)
+for i in l:
+    freq[i]=0
+print("initialising the dictionary: \n",freq)
+for i in l:
+    freq[i]+=1
+print("After calculation : \n",freq)
+
+"""Provided is a string saved to the variable name s1. 
+Create a dictionary named counts that contains each letter in s1 and the number of times it occurs."""
+s1 = "hello"
+counts={}
+l=[]
+for i in s1:
+    l.append(i)
+print("list is : \n",l)
+for i in l:
+    counts[i]=0
+for i in l:
+    counts[i]+=1
+print("output  : \n",counts)
+
+
+"""Create a dictionary, freq_words, that contains each word in string str1 as the key and its frequency as the value."""
+
+str1 = "I wish I wish with all my heart to fly with dragons in a land apart"
+freq_words={}
+l=str1.split()
+print("List : \n",l)
+for i in l:
+    freq_words[i]=0
+for i in l:
+    freq_words[i]+=1
+print("Output : \n",freq_words)
+
+"""Create a dictionary called wrd_d from the string sent, so that the key is a word and the value is how many
+times you have seen that word."""
+
+sent = "Singing in the rain and playing in the rain are two entirely different situations but both can be good"
+wrd_d={}
+l=sent.split()
+print("List : \n",l)
+for i in l:
+    wrd_d[i]=0
+for i in l:
+    wrd_d[i]+=1
+print("Output : \n",wrd_d)
+
+
+"""Create the dictionary characters that shows each character from the string sally and its frequency. 
+Then, find the most frequent letter based on the dictionary. Assign this letter to the variable best_char."""
+
+
+sally = "sally sells sea shells by the sea shore"
+characters={}
+l=[]
+for i in sally:
+    l.append(i)
+print("list : \n",l)
+for i in l:
+    characters[i]=0
+for i in l:
+    characters[i]+=1
+best_chars=characters['a']
+print("characters : \n",characters)
+for i in characters:
+    if characters[i]>best_chars:
+        best_chars=characters[i]
+        best_char=i
+print("output : ",best_char)
+
+
+
+
+"""Create the dictionary characters that shows each character from the string sally and its frequency. 
+Then, find the most frequent letter based on the dictionary. Assign this letter to the variable best_char."""
+
+sally = "sally sells sea shells by the sea shore"
+characters = {}
+for i in sally:
+    if i in characters:
+        characters[i] += 1
+    else:
+        characters[i] = 1
+
+best_char = max(characters, key=characters.get)
+print("output : ",best_char)
+
+
+
+
+
+"""Find the least frequent letter. Create the dictionary characters that shows each character from string sally and
+its frequency. Then, find the least frequent letter in the string and assign the letter to the variable worst_char."""
+
+sally = "sally sells sea shells by the sea shore and by the road"
+characters = {}
+l=[]
+for i in sally:
+    l.append(i)
+#print("lsit : \n",l)
+for i in l:
+    characters[i]=0
+print(characters)
+
+for i in l:
+    characters[i]+=1
+worst_chars=characters['a']
+for i in characters:
+    if characters[i]<worst_chars:
+        worst_chars=characters[i]
+        worst_char=i
+print("dictionary : ",characters)
+print("worst_char : ",worst_char)
+
+
+"""Create a dictionary named letter_counts that contains each letter and the number of times it occurs in string1. 
+Challenge: Letters should not be counted separately as upper-case and lower-case. Intead, all of them should be counted as 
+lower-case."""
+
+
+
+string1 = "There is a tide in the affairs of men, Which taken at the flood, leads on to fortune. Omitted, all the voyage of their life is bound in shallows and in miseries. On such a full sea are we now afloat. And we must take the current when it serves, or lose our ventures."
+letter_counts={}
+
+st=string1.lower()
+l=[]
+for i in st:
+    l.append(i)
+#print("the list is : \n",l)
+for i in l:
+    letter_counts[i]=0
+for i in l:
+    letter_counts[i]+=1
+print(letter_counts)
+
+#print(l)
+
+"""Create a dictionary called low_d that keeps track of all the characters in the string p and notes how 
+many times each character was seen. Make sure that there are no repeats of characters as keys, such that “T” and “t” are both seen as a “t” for example."""
+
+
+p = "Summer is a great time to go outside. You have to be careful of the sun though because of the heat."
+low_d={}
+
+
+p1=p.lower()
+l=[]
+for i in p1:
+    l.append(i)
+#print("the list is : \n",l)
+for i in l:
+    low_d[i]=0
+for i in l:
+    low_d[i] += 1
+print(low_d)
+
+
