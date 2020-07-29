@@ -1,0 +1,295 @@
+def f1():
+    print("hello!!!")
+f1()
+
+# Example of functions : 
+
+def cyu(s1, s2):
+   if len(s1) > len(s2):
+      print(s1)
+   else:
+      print(s2)
+
+cyu("Hello", "Goodbye")
+
+# code example :
+def longer_than_five(list_of_names):
+    for name in list_of_names: # iterate over the list to look at each name
+        if len(name) > 5: # as soon as you see a name longer than 5 letters,
+            return True # then return True!
+            # If Python executes that return statement, the function is over and the rest of the code will not run -- you already have your answer!
+    return False # You will only get to this line if you
+    # iterated over the whole list and did not get a name where
+    # the if expression evaluated to True, so at this point, it's correct to return False!
+
+# Here are a couple sample calls to the function with different lists of names. Try running this code in Codelens a few times and make sure you understand exactly what is happening.
+
+list1 = ["Sam","Tera","Sal","Amita"]
+list2 = ["Rey","Ayo","Lauren","Natalie"]
+
+print(longer_than_five(list1))
+print(longer_than_five(list2))
+
+
+def square(x):
+    y = x * x
+    return y
+
+print(square(5) + square(5))
+
+
+""" Write a function named total that takes a list of integers as input, 
+and returns the total value of all those integers added together."""
+
+
+def total(x):
+    sum=0
+    for i in x:
+        sum+=i
+    return sum
+a=[1,5,6,7]
+print(total(a))
+
+
+""" Write a function called count that takes a list of numbers as input 
+and returns a count of the number of elements in the list."""
+
+
+def count(x):
+    c=0
+    for i in x:
+        c+=1
+    return c
+l=[3,5,7,6,1,2]
+print(count(l))
+print("enter ")
+
+def add(a,b):
+    sum=0
+    sum=a+b
+    return sum
+
+sum=add(3,4)
+
+
+
+def addit(x):
+    return x+5
+def mult(y,z):
+    return y*z
+a=int(input("enter : "))
+b=addit(a)
+print(a)
+print(a,b)
+c=mult(a,b)
+print(c)
+    
+    
+   
+
+#GOOD EXAMPLE : Multiple fuction call
+
+def square(x):
+    return x*x
+
+def g(y):
+    return y + 3
+
+def h(y):
+    return square(y) + 3
+
+print(h(2))
+
+
+
+def changeit(lst):
+    lst[0] = "Michigan"
+    lst[1] = "Wolverines"
+    return lst
+
+mylst = ['106', 'students', 'are', 'awesome']
+newlst = changeit(list(mylst))
+print(mylst)
+print(newlst)
+
+def change(s):
+    return s + " Nice to meet you!"
+st=change(input(""))
+print(st)
+
+
+print(5/2)
+print(5//2)
+
+"""You will need to write two functions for this problem. The first function, divide that takes in any number 
+and returns that same number divided by 2. The second function called sum should take any number, divide it by 2, 
+and add 6. It should return this new number. You should call the divide function within the sum function.
+Do not worry about decimals."""
+
+def divide(n):
+    print("inside the divide function : ",n)
+    return n/2
+def sum(m):
+     return divide(6 + m/2)
+print(sum(18))
+     
+# NOTE : THE NEXT COLUMN ALSO SHOWS THE CODE FOR SAME CODE
+
+
+"""You will need to write two functions for this problem. The first function, divide that takes in any number 
+and returns that same number divided by 2. The second function called sum should take any number, divide it by 2, 
+and add 6. It should return this new number. You should call the divide function within the sum function.
+Do not worry about decimals."""
+
+
+def divide(n):
+    #print("inside the divide function : ",n)
+    return n/2
+def sum(m):
+    return(6 + m/2)    
+print(divide(sum(int(input()))))
+
+julia = ("Julia", "Roberts", 1967, "Duplicity", 2009, "Actress", "Atlanta, Georgia")
+# or equivalently
+julia = "Julia", "Roberts", 1967, "Duplicity", 2009, "Actress", "Atlanta, Georgia"
+print(julia[6])
+
+
+"""Provided is a list of tuples. Create another list called t_check that contains the third element of every tuple."""
+
+
+lst_tups = [('Articuno', 'Moltres', 'Zaptos'), ('Beedrill', 'Metapod', 'Charizard', 'Venasaur', 'Squirtle'), ('Oddish', 'Poliwag', 'Diglett', 'Bellsprout'), ('Ponyta', "Farfetch'd", "Tauros", 'Dragonite'), ('Hoothoot', 'Chikorita', 'Lanturn', 'Flaaffy', 'Unown', 'Teddiursa', 'Phanpy'), ('Loudred', 'Volbeat', 'Wailord', 'Seviper', 'Sealeo')]
+t_check=[]
+
+for i in lst_tups:
+    for j in range(len(i)):
+        if j==2:
+            t_check.append(i[j])
+print(t_check)
+
+
+# PRINT ALL THE ELEMENTS INDIVIDUALLY IN A SINGLE LIST : 
+
+lst_tups = [('Articuno', 'Moltres', 'Zaptos'), ('Beedrill', 'Metapod', 'Charizard', 'Venasaur', 'Squirtle'), ('Oddish', 'Poliwag', 'Diglett', 'Bellsprout'), ('Ponyta', "Farfetch'd", "Tauros", 'Dragonite'), ('Hoothoot', 'Chikorita', 'Lanturn', 'Flaaffy', 'Unown', 'Teddiursa', 'Phanpy'), ('Loudred', 'Volbeat', 'Wailord', 'Seviper', 'Sealeo')]
+t_check=[]
+l=[]
+a=[]
+for i in range(len(lst_tups)):
+    l.append(len(lst_tups[i]))
+
+for i in lst_tups:
+    for j in i:
+        t_check.append(j)
+print(t_check)
+
+""". Below, we have provided a list of tuples. Write a for loop that saves the second element
+of each tuple into a list called seconds."""
+tups = [('a', 'b', 'c'), (8, 7, 6, 5), ('blue', 'green', 'yellow', 'orange', 'red'), (5.6, 9.99, 2.5, 8.2), ('squirrel', 'chipmunk')]
+seconds=[]
+
+for i in tups:
+    for j in range(len(i)):
+        if j==1:
+            seconds.append(i[j])
+print(seconds)
+
+# GOOD EXAPMPLE FOR FUNCTIONS :
+
+def circleInfo(r):
+    """ Return (circumference, area) of a circle of radius r """
+    c = 2 * 3.14159 * r
+    a = 3.14159 * r * r
+    return c, a
+
+print(circleInfo(10))
+
+circumference, area = circleInfo(10)
+print(circumference)
+print(area)
+
+circumference_two, area_two = circleInfo(45)
+print(circumference_two)
+print(area_two)
+
+def information(name,birth_year,fav_color,hometown):
+    return (name,birth_year,fav_color,hometown)
+    
+print(information("aman",2019,"green","mongolia"))
+
+
+# TUPPLE ASIGNMENT AND UNPACKING : 
+
+a = "aman",2019,"green","mongolia"
+print(type(a))
+name,birth_year,fav_color,hometown = a
+print(a)
+
+m,n,o,p=1,2,3,5
+print(m,n,o,p)
+
+
+swimmers = {'Manuel':4, 'Lochte':12, 'Adrian':7, 'Ledecky':5, 'Dirado':4, 'Phelps':23}
+l=list(swimmers)
+print(l)
+
+"""With only one line of code, assign the variables water, fire, electric, and grass to the values 
+“Squirtle”, “Charmander”, “Pikachu”, and “Bulbasaur” """
+
+
+pokemon = "Squirtle","Charmander","Pikachu","Bulbasaur"
+water,fire,electric,grass = pokemon
+print(water,fire,electric,grass )
+
+
+pokemon = {'Rattata': 19, 'Machop': 66, 'Seel': 86, 'Volbeat': 86, 'Solrock': 126}
+print(len(pokemon))
+p_names=[]
+p_number=[]
+for i in pokemon:
+    p_names.append(i)
+    p_number.append(pokemon[i])
+
+
+
+pokemon = {'Rattata': 19, 'Machop': 66, 'Seel': 86, 'Volbeat': 86, 'Solrock': 126}
+print(len(pokemon))
+p_names=list(pokemon.keys())
+p_number=list(pokemon.values())
+print(p_names,"\n",p_number)
+
+
+
+
+tuples_lst = [('Beijing', 'China', 2008), ('London', 'England', 2012), ('Rio', 'Brazil', 2016, 'Current'), ('Tokyo', 'Japan', 2020, 'Future')]
+country=[]
+for i in tuples_lst:
+    country.append(i[1])
+print(country)
+
+"""Given is the dictionary, gold, which shows the country and the number of gold medals they have earned so 
+far in the 2016 Olympics. Create a list, num_medals, that contains only the number of medals for each country.
+You must use the .items() method. Note: The .items() method provides a list of tuples. Do not use .keys() method."""
+
+
+gold = {'USA':31, 'Great Britain':19, 'China':19, 'Germany':13, 'Russia':12, 'Japan':10, 'France':8, 'Italy':8}
+num_medals=[]
+
+n=list(gold.items())
+print(n)
+for i in n:
+    num_medals.append(i[1])
+print(num_medals)
+
+
+print("----------------------------------------------------------------------------------")
+print("BETTER METHOD :" )    
+      
+
+      
+gold = {'USA':31, 'Great Britain':19, 'China':19, 'Germany':13, 'Russia':12, 'Japan':10, 'France':8, 'Italy':8}
+num_medal=[]
+for i in gold:
+    num_medal.append(gold[i])
+print(num_medal)
+
+
