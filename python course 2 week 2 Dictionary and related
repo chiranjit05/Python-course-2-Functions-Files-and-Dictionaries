@@ -1,7 +1,7 @@
 JUPYTER NOTEBOOK LINK : http://localhost:8888/notebooks/Desktop/coursera%20courses/python_course_2/python%20course%202%20week%202%20Dictionary%20and%20related%20.ipynb
 
 
-# Method 1 of declaration :
+# Method 1 of declaring a dictionary :
 a = {}  
 a[' rank 1 '] = 'shippuden'
 a[' rank 2 '] = 'one piece'
@@ -10,15 +10,15 @@ a[' rank 4 '] = 'psycho pass'
 print(a)
 print(type(a))
 
-# Method 2 of declaration : 
+# Method 2 of dictionary declaration : 
 
 b = {'rank 1' : 'shippuden','rank 2' : 'one piece','rank 3' :  'demon slayer','rank 4' : 'psycho pass'}
 print(b)
 
 
-#  Printing value of dictionary :
+#  Printing a particular value of dictionary :
 
-b = {'rank 1' : 'shippuden','rank 2' : 'one piece','rank 3' :  'demon slayer','rank 4' : 'psycho pass'}
+b = {'rank 1' : 'shippuden','rank 2' : 'one piece','rank 3' :  'demon slayer','rank 4' : 'psycho pass'} # creating a dictionary
 
 print (b['rank 2'])
 print(b['rank 1'])
